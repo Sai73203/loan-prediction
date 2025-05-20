@@ -4,6 +4,15 @@ import numpy as np
 
 st.title("🏦 Loan Approval Predictor")
 
+st.markdown("Welcome to the Loan Approval Predictor app! Please fill in the details below to check your loan eligibility.")
+
+st.markdown("### 📋 Applicant Details")
+st.markdown("**Note:** All fields are required.")
+
+st.markdown("### 📋 Please enter your details below:")
+
+model = pickle.load(open("loan_model.pkl", "rb"))
+
 model = pickle.load(open("loan_model.pkl", "rb"))
 
 gender = st.selectbox("Gender", ["Male", "Female"])
